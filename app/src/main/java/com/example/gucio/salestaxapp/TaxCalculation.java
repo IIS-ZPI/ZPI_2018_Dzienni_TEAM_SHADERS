@@ -1,8 +1,6 @@
 package com.example.gucio.salestaxapp;
 
 import java.math.BigDecimal;
-import java.math.MathContext;
-import java.math.RoundingMode;
 
 
 public class TaxCalculation {
@@ -13,8 +11,13 @@ public class TaxCalculation {
 
     public BigDecimal marginCalculation(BigDecimal tax)
     {
+        tax = tax.divide(new BigDecimal(100),2,BigDecimal.ROUND_CEILING);
+        System.out.println(tax);
         baseCost = baseCost.add(baseCost.multiply(tax));
+        System.out.println(baseCost);
         profitMargin = generalCost.subtract(baseCost);
-        return profitMargin;
+        profitMargin = profitMargin.divide(new BigDecimal(1),4,BigDecimal.ROUND_CEILING);
+
+        return profitMargin.stripTrailingZeros();
     }
 }

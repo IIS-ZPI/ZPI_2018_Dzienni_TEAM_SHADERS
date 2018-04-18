@@ -19,8 +19,9 @@ public class Test1 {
     public void correctTaxCalculation() throws Exception {
 
         BigDecimal test;
-        test = taxCalculation.marginCalculation(BigDecimal.valueOf(5));
+        BigDecimal num = new BigDecimal(4);
+        test = taxCalculation.marginCalculation(num);
         System.out.print(test);
-        //assertSame(, test);
+        assertEquals(BigDecimal.valueOf(1.7550), test);
     }
 }
