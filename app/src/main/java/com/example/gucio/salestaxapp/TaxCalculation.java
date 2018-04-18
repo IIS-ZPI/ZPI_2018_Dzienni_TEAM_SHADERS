@@ -13,7 +13,6 @@ public class TaxCalculation {
 
     public BigDecimal marginCalculation(BigDecimal tax)
     {
-
         baseCost = baseCost.add(baseCost.multiply(tax));
         profitMargin = generalCost.subtract(baseCost);
         return profitMargin;
