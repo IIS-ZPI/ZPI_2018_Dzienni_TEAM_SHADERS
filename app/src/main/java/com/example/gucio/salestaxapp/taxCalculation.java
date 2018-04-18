@@ -9,7 +9,7 @@ public class taxCalculation {
 
     public BigDecimal marginCalculation(BigDecimal tax)
     {
-
+        tax = tax.divide(new BigDecimal(100),BigDecimal.ROUND_CEILING);
         baseCost = baseCost.add(baseCost.multiply(tax));
         profitMargin = generalCost.subtract(baseCost);
 
