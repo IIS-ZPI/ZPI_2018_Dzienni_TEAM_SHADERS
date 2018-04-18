@@ -1,7 +1,11 @@
+package com.example.gucio.salestaxapp;
+
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 
 
-public class taxCalculation {
+public class TaxCalculation {
 
     private BigDecimal baseCost = new BigDecimal(10);
     private BigDecimal generalCost = new BigDecimal(12.155);
@@ -12,7 +16,6 @@ public class taxCalculation {
 
         baseCost = baseCost.add(baseCost.multiply(tax));
         profitMargin = generalCost.subtract(baseCost);
-
         return profitMargin;
     }
 }
