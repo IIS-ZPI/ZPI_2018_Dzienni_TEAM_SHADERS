@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     Spinner expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
-    States states = new States();
+    States states;
 
     private void setupApp()
     {
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         // Spinner click listener
         spinner.setOnItemSelectedListener(this);
+        states = new States();
 
 
         // Spinner Drop down elements
