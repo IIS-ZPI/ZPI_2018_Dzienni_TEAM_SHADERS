@@ -15,24 +15,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TableRow
+        <Spinner
+            android:id="@+id/spinner"
             android:layout_width="match_parent"
-            android:layout_height="60dp">
-
-            <ExpandableListView
-                android:id="@+id/State"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </TableRow>
+            android:layout_height="75dp" />
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="60dp">
 
-            <TextView
-                android:id="@+id/TaxValue"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
         </TableRow>
 
         <TableRow
@@ -40,7 +31,7 @@
             android:layout_height="60dp">
 
             <EditText
-                android:id="@+id/Income"
+                android:id="@+id/TaxValue"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:ems="10"
