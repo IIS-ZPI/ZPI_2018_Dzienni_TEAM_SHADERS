@@ -8,12 +8,12 @@ import java.util.HashMap;
 public class ProducktCategory {
 
     private States states;
-    private HashMap<String, BigDecimal> groceries;
-    private HashMap<String, BigDecimal> preparedFood;
-    private HashMap<String, BigDecimal> presciptionDrugs;
-    private HashMap<String, BigDecimal> nonPresciptionDrugs;
-    private HashMap<String, BigDecimal> clothing;
-    private HashMap<String, BigDecimal> intangibles;
+    private HashMap<String, BigDecimal> groceries = new HashMap<>();
+    private HashMap<String, BigDecimal> preparedFood =new HashMap<>();
+    private HashMap<String, BigDecimal> presciptionDrugs =new HashMap<>();
+    private HashMap<String, BigDecimal> nonPresciptionDrugs=new HashMap<>();
+    private HashMap<String, BigDecimal> clothing = new HashMap<>();
+    private HashMap<String, BigDecimal> intangibles = new HashMap<>();
 
     public void setGroceries()
     {
