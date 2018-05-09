@@ -2,6 +2,9 @@ package com.example.gucio.salestaxapp;
 
 
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -17,7 +20,7 @@ public class ProducktCategory {
 
     public void setGroceries()
     {
-        groceries.put("Puerto Rico",new BigDecimal(0.01));
+        groceries.put("Puerto Rico",new BigDecimal(0.01,new MathContext(2, RoundingMode.DOWN)));
         groceries.put("Tennessee",new BigDecimal(0.05));
         groceries.put("Arkansas",new BigDecimal(0.015));
         groceries.put("Illinois",new BigDecimal(0.01));
@@ -71,7 +74,7 @@ public class ProducktCategory {
 
     public BigDecimal checkGroceries (String state)
     {
-        if(groceries.containsValue(state)){
+        if(groceries.containsKey(state)){
             return groceries.get(state);
         }else return null;
     }
