@@ -31,8 +31,9 @@ public class Test1 {
     @Test
     public void checkTestGroceries() {
         String state = "Tennessee";
+        BigDecimal test = producktCategory.checkGroceries(state);
         producktCategory.setGroceries();
-       // assertArrayEquals(new BigDecimal(0.05),producktCategory.checkGroceries(state));
+        assertEquals(BigDecimal.valueOf(0.05),test);
 
         System.out.print(state);
     }

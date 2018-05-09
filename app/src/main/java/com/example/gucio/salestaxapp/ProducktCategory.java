@@ -71,7 +71,7 @@ public class ProducktCategory {
 
     public BigDecimal checkGroceries (String state)
     {
-        if(groceries.containsKey(state)){
+        if(groceries.containsValue(state)){
             return groceries.get(state);
         }else return null;
     }
