@@ -17,14 +17,11 @@ public class Test1 {
     TaxCalculation taxCalculation = new TaxCalculation();
     ProducktCategory producktCategory = new ProducktCategory();
     Scanner scanner = new Scanner(System.in);
+    private States states = new States();
 
     @Test
-    public void correctTaxCalculation() throws Exception {
-
-        BigDecimal test;
-        BigDecimal num = new BigDecimal(4);
-        test = taxCalculation.marginCalculation(num.toString());
-        System.out.print(test);
+    public void correctTaxCalculation() {
+        BigDecimal test = taxCalculation.marginCalculation("Alabama");
         assertEquals(BigDecimal.valueOf(1.7550), test);
     }
     @Test
