@@ -47,4 +47,14 @@ public class Test1 {
         System.out.print(state);
     }
 
+    @Test
+    public void checkTestPresciptionDrugs() {
+        String state = "Illinois";
+        producktCategory.setPresciptionDrugs();
+        BigDecimal test = producktCategory.checkPresciptionDrugs(state);
+        assertEquals(BigDecimal.valueOf(0.01),test);
+
+        System.out.print(state);
+    }
+
 }
