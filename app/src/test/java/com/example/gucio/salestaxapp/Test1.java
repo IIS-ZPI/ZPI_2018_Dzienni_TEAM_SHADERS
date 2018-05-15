@@ -20,7 +20,7 @@ public class Test1 {
 
         BigDecimal test;
         BigDecimal num = new BigDecimal(4);
-        test = taxCalculation.marginCalculation(num);
+        test = taxCalculation.marginCalculation(num.toString());
         System.out.print(test);
         assertEquals(BigDecimal.valueOf(1.7550), test);
     }
