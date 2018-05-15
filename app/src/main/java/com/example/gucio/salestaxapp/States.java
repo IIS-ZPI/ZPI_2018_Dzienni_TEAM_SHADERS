@@ -1,13 +1,17 @@
 package com.example.gucio.salestaxapp;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 
 public class States {
-    HashMap<String, BigDecimal> statesList;
-    
-    public void States() {
+    public HashMap<String, BigDecimal> statesList;
+
+    States (){
+        addStates();
+    }
+    public void addStates() {
         statesList = new HashMap<String, BigDecimal>();
 
         statesList.put("Alabama", new BigDecimal(4));
