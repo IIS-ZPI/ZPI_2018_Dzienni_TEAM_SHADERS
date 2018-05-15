@@ -37,5 +37,14 @@ public class Test1 {
 
         System.out.print(state);
     }
-    
+    @Test
+    public void checkTestPreparedFood() {
+        String state = "Indiana";
+        producktCategory.setPreparedFood();
+        BigDecimal test = producktCategory.checkPreparedFood(state);
+        assertEquals(BigDecimal.valueOf(0.09),test);
+
+        System.out.print(state);
+    }
+
 }
