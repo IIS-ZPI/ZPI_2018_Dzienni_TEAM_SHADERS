@@ -27,7 +27,6 @@ public class Test1 {
         System.out.print(test);
         assertEquals(BigDecimal.valueOf(1.7550), test);
     }
-
     @Test
     public void checkTestGroceries() {
         String state = "Tennessee";
@@ -76,5 +75,5 @@ public class Test1 {
 
         System.out.print(state);
     }
-
 }
+
