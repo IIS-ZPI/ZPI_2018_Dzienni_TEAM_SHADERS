@@ -20,46 +20,46 @@ public class ProducktCategory {
 
     public void setGroceries()
     {
-        groceries.put("Puerto Rico",new BigDecimal(0.01,new MathContext(2, RoundingMode.DOWN)));
-        groceries.put("Tennessee",new BigDecimal(0.05));
-        groceries.put("Arkansas",new BigDecimal(0.015));
-        groceries.put("Illinois",new BigDecimal(0.01));
-        groceries.put("Utah",new BigDecimal(0.03));
-        groceries.put("Virginia",new BigDecimal(0.025));
-        groceries.put("Louisiana",new BigDecimal(0.07));
-        groceries.put("North Carolina",new BigDecimal(0.02));
-        groceries.put("Missouri",new BigDecimal(0.01225));
-        groceries.put("Georgia",new BigDecimal(0.04));
+        groceries.put("Puerto Rico",new BigDecimal(0.01).setScale(2,RoundingMode.DOWN));
+        groceries.put("Tennessee",new BigDecimal(0.05).setScale(2,RoundingMode.DOWN));
+        groceries.put("Arkansas",new BigDecimal(0.015).setScale(2,RoundingMode.DOWN));
+        groceries.put("Illinois",new BigDecimal(0.01).setScale(2,RoundingMode.DOWN));
+        groceries.put("Utah",new BigDecimal(0.03).setScale(2,RoundingMode.DOWN));
+        groceries.put("Virginia",new BigDecimal(0.025).setScale(2,RoundingMode.DOWN));
+        groceries.put("Louisiana",new BigDecimal(0.07).setScale(2,RoundingMode.DOWN));
+        groceries.put("North Carolina",new BigDecimal(0.02).setScale(2,RoundingMode.DOWN));
+        groceries.put("Missouri",new BigDecimal(0.01225).setScale(2,RoundingMode.DOWN));
+        groceries.put("Georgia",new BigDecimal(0.04).setScale(2,RoundingMode.DOWN));
 
     }
 
     public void setPreparedFood()
     {
-        preparedFood.put("Indiana",new BigDecimal(0.09));
-        preparedFood.put("Rhode Island",new BigDecimal(0.08));
-        preparedFood.put("Minnesota",new BigDecimal(0.10775));
-        preparedFood.put("Washington",new BigDecimal(0.1));
-        preparedFood.put("Illinois",new BigDecimal(0.0825));
-        preparedFood.put("Massachusetts",new BigDecimal(0.07));
-        preparedFood.put("Florida",new BigDecimal(0.09));
-        preparedFood.put("South Carolina",new BigDecimal(0.105));
-        preparedFood.put("Vermont",new BigDecimal(0.09));
-        preparedFood.put("District of Columbia",new BigDecimal(0.1));
-        preparedFood.put("Maine",new BigDecimal(0.08));
-        preparedFood.put("Nebraska",new BigDecimal(0.095));
-        preparedFood.put("Virginia",new BigDecimal(0.053));
-        preparedFood.put("North Carolina",new BigDecimal(0.085));
-        preparedFood.put("New Hampshire",new BigDecimal(0.09));
+        preparedFood.put("Indiana",new BigDecimal(0.09).setScale(2,RoundingMode.DOWN));
+        preparedFood.put("Rhode Island",new BigDecimal(0.08).setScale(2,RoundingMode.DOWN));
+        preparedFood.put("Minnesota",new BigDecimal(0.10775).setScale(2,RoundingMode.DOWN));
+        preparedFood.put("Washington",new BigDecimal(0.1).setScale(2,RoundingMode.DOWN));
+        preparedFood.put("Illinois",new BigDecimal(0.0825).setScale(2,RoundingMode.DOWN));
+        preparedFood.put("Massachusetts",new BigDecimal(0.07).setScale(2,RoundingMode.DOWN));
+        preparedFood.put("Florida",new BigDecimal(0.09).setScale(2,RoundingMode.DOWN));
+        preparedFood.put("South Carolina",new BigDecimal(0.105).setScale(2,RoundingMode.DOWN));
+        preparedFood.put("Vermont",new BigDecimal(0.09).setScale(2,RoundingMode.DOWN));
+        preparedFood.put("District of Columbia",new BigDecimal(0.1).setScale(2,RoundingMode.DOWN));
+        preparedFood.put("Maine",new BigDecimal(0.08).setScale(2,RoundingMode.DOWN));
+        preparedFood.put("Nebraska",new BigDecimal(0.095).setScale(2,RoundingMode.DOWN));
+        preparedFood.put("Virginia",new BigDecimal(0.053).setScale(2,RoundingMode.DOWN));
+        preparedFood.put("North Carolina",new BigDecimal(0.085).setScale(2,RoundingMode.DOWN));
+        preparedFood.put("New Hampshire",new BigDecimal(0.09).setScale(2,RoundingMode.DOWN));
     }
 
     public void setPresciptionDrugs()
     {
-        presciptionDrugs.put("Illinois",new BigDecimal(0.01));
+        presciptionDrugs.put("Illinois",new BigDecimal(0.01).setScale(2,RoundingMode.DOWN));
     }
 
     public void setNonPresciptionDrugs()
     {
-        nonPresciptionDrugs.put("Illinois",new BigDecimal(0.01));
+        nonPresciptionDrugs.put("Illinois",new BigDecimal(0.01).setScale(2,RoundingMode.DOWN));
     }
 
     public void setClothing()
@@ -69,7 +69,7 @@ public class ProducktCategory {
 
     public void setIntangibles()
     {
-        intangibles.put("Connecticut",new BigDecimal(0.01));
+        intangibles.put("Connecticut",new BigDecimal(0.01).setScale(2,RoundingMode.DOWN));
     }
 
     public BigDecimal checkGroceries (String state)
