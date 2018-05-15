@@ -67,4 +67,14 @@ public class Test1 {
         System.out.print(state);
     }
 
+    @Test
+    public void checkTestIntangibles() {
+        String state = "Connecticut";
+        producktCategory.setIntangibles();
+        BigDecimal test = producktCategory.checkIntangibles(state);
+        assertEquals(BigDecimal.valueOf(0.01),test);
+
+        System.out.print(state);
+    }
+
 }
