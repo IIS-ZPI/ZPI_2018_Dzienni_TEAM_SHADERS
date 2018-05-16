@@ -20,46 +20,46 @@ public class ProducktCategory {
 
     public void setGroceries()
     {
-        groceries.put("Puerto Rico",new BigDecimal(0.01).setScale(2,RoundingMode.HALF_EVEN));
-        groceries.put("Tennessee",new BigDecimal(0.05).setScale(2,RoundingMode.HALF_EVEN));
-        groceries.put("Arkansas",new BigDecimal(0.015).setScale(2,RoundingMode.HALF_EVEN));
-        groceries.put("Illinois",new BigDecimal(0.01).setScale(2,RoundingMode.HALF_EVEN));
-        groceries.put("Utah",new BigDecimal(0.03).setScale(2,RoundingMode.HALF_EVEN));
-        groceries.put("Virginia",new BigDecimal(0.025).setScale(2,RoundingMode.HALF_EVEN));
-        groceries.put("Louisiana",new BigDecimal(0.07).setScale(2,RoundingMode.HALF_EVEN));
-        groceries.put("North Carolina",new BigDecimal(0.02).setScale(2,RoundingMode.HALF_EVEN));
-        groceries.put("Missouri",new BigDecimal(0.01225).setScale(2,RoundingMode.HALF_EVEN));
-        groceries.put("Georgia",new BigDecimal(0.04).setScale(2,RoundingMode.HALF_EVEN));
+        groceries.put("Puerto Rico",new BigDecimal(1).setScale(2,RoundingMode.HALF_EVEN));
+        groceries.put("Tennessee",new BigDecimal(5).setScale(2,RoundingMode.HALF_EVEN));
+        groceries.put("Arkansas",new BigDecimal(1.5).setScale(2,RoundingMode.HALF_EVEN));
+        groceries.put("Illinois",new BigDecimal(1).setScale(2,RoundingMode.HALF_EVEN));
+        groceries.put("Utah",new BigDecimal(3).setScale(2,RoundingMode.HALF_EVEN));
+        groceries.put("Virginia",new BigDecimal(2.5).setScale(2,RoundingMode.HALF_EVEN));
+        groceries.put("Louisiana",new BigDecimal(7).setScale(2,RoundingMode.HALF_EVEN));
+        groceries.put("North Carolina",new BigDecimal(2).setScale(2,RoundingMode.HALF_EVEN));
+        groceries.put("Missouri",new BigDecimal(1.225).setScale(2,RoundingMode.HALF_EVEN));
+        groceries.put("Georgia",new BigDecimal(4).setScale(2,RoundingMode.HALF_EVEN));
 
     }
 
     public void setPreparedFood()
     {
-        preparedFood.put("Indiana",new BigDecimal(0.09).setScale(2,RoundingMode.HALF_EVEN));
-        preparedFood.put("Rhode Island",new BigDecimal(0.08).setScale(2,RoundingMode.HALF_EVEN));
-        preparedFood.put("Minnesota",new BigDecimal(0.10775).setScale(2,RoundingMode.HALF_EVEN));
-        preparedFood.put("Washington",new BigDecimal(0.1).setScale(2,RoundingMode.HALF_EVEN));
-        preparedFood.put("Illinois",new BigDecimal(0.0825).setScale(2,RoundingMode.HALF_EVEN));
-        preparedFood.put("Massachusetts",new BigDecimal(0.07).setScale(2,RoundingMode.HALF_EVEN));
-        preparedFood.put("Florida",new BigDecimal(0.09).setScale(2,RoundingMode.HALF_EVEN));
-        preparedFood.put("South Carolina",new BigDecimal(0.105).setScale(2,RoundingMode.HALF_EVEN));
-        preparedFood.put("Vermont",new BigDecimal(0.09).setScale(2,RoundingMode.HALF_EVEN));
-        preparedFood.put("District of Columbia",new BigDecimal(0.1).setScale(2,RoundingMode.HALF_EVEN));
-        preparedFood.put("Maine",new BigDecimal(0.08).setScale(2,RoundingMode.HALF_EVEN));
-        preparedFood.put("Nebraska",new BigDecimal(0.095).setScale(2,RoundingMode.HALF_EVEN));
-        preparedFood.put("Virginia",new BigDecimal(0.053).setScale(2,RoundingMode.HALF_EVEN));
-        preparedFood.put("North Carolina",new BigDecimal(0.085).setScale(2,RoundingMode.HALF_EVEN));
-        preparedFood.put("New Hampshire",new BigDecimal(0.09).setScale(2,RoundingMode.HALF_EVEN));
+        preparedFood.put("Indiana",new BigDecimal(9).setScale(2,RoundingMode.HALF_EVEN));
+        preparedFood.put("Rhode Island",new BigDecimal(8).setScale(2,RoundingMode.HALF_EVEN));
+        preparedFood.put("Minnesota",new BigDecimal(10.775).setScale(2,RoundingMode.HALF_EVEN));
+        preparedFood.put("Washington",new BigDecimal(1).setScale(2,RoundingMode.HALF_EVEN));
+        preparedFood.put("Illinois",new BigDecimal(8.25).setScale(2,RoundingMode.HALF_EVEN));
+        preparedFood.put("Massachusetts",new BigDecimal(7).setScale(2,RoundingMode.HALF_EVEN));
+        preparedFood.put("Florida",new BigDecimal(9).setScale(2,RoundingMode.HALF_EVEN));
+        preparedFood.put("South Carolina",new BigDecimal(10.5).setScale(2,RoundingMode.HALF_EVEN));
+        preparedFood.put("Vermont",new BigDecimal(9).setScale(2,RoundingMode.HALF_EVEN));
+        preparedFood.put("District of Columbia",new BigDecimal(1).setScale(2,RoundingMode.HALF_EVEN));
+        preparedFood.put("Maine",new BigDecimal(8).setScale(2,RoundingMode.HALF_EVEN));
+        preparedFood.put("Nebraska",new BigDecimal(9.5).setScale(2,RoundingMode.HALF_EVEN));
+        preparedFood.put("Virginia",new BigDecimal(5.3).setScale(2,RoundingMode.HALF_EVEN));
+        preparedFood.put("North Carolina",new BigDecimal(8.5).setScale(2,RoundingMode.HALF_EVEN));
+        preparedFood.put("New Hampshire",new BigDecimal(9).setScale(2,RoundingMode.HALF_EVEN));
     }
 
     public void setPresciptionDrugs()
     {
-        presciptionDrugs.put("Illinois",new BigDecimal(0.01).setScale(2,RoundingMode.HALF_EVEN));
+        presciptionDrugs.put("Illinois",new BigDecimal(1).setScale(2,RoundingMode.HALF_EVEN));
     }
 
     public void setNonPresciptionDrugs()
     {
-        nonPresciptionDrugs.put("Illinois",new BigDecimal(0.01).setScale(2,RoundingMode.HALF_EVEN));
+        nonPresciptionDrugs.put("Illinois",new BigDecimal(1).setScale(2,RoundingMode.HALF_EVEN));
     }
 
     public void setClothing()

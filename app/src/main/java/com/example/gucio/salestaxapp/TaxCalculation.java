@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 class TaxCalculation {
 
     private BigDecimal baseCost = new BigDecimal(10);
-    private BigDecimal generalCost = new BigDecimal(12.155);
+    private BigDecimal generalCost = new BigDecimal(12.485);
     private ProducktCategory producktCategory = new ProducktCategory();
     private States states = new States();
 
