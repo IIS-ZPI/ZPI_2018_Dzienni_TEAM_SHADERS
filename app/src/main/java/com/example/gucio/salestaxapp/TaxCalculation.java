@@ -7,8 +7,8 @@ class TaxCalculation {
 
     private BigDecimal baseCost = new BigDecimal(10);
     private BigDecimal generalCost = new BigDecimal(12.155);
-    private States states;
     private ProducktCategory producktCategory = new ProducktCategory();
+    private States states = new States();
 
     BigDecimal marginCalculation(String stateName)
     {
