@@ -22,14 +22,19 @@ public class Test1 {
     @Test
     public void correctTaxCalculation() {
         BigDecimal test = taxCalculation.marginCalculation("Alabama");
-        assertEquals(BigDecimal.valueOf(1.7550), test);
+        assertEquals(BigDecimal.valueOf(2.085), test);
+
+        System.out.println("Indiana Test");
+        BigDecimal testIndiana = taxCalculation.marginCalculation("Indiana");
+        System.out.println("Zarobek: "+testIndiana);
+        assertEquals(BigDecimal.valueOf(1.357), testIndiana);
     }
     @Test
     public void checkTestGroceries() {
         String state = "Tennessee";
         producktCategory.setGroceries();
         BigDecimal test = producktCategory.checkGroceries(state);
-        assertEquals(BigDecimal.valueOf(0.05),test);
+        assertEquals(BigDecimal.valueOf(5),test);
 
         System.out.print(state);
     }
@@ -38,7 +43,7 @@ public class Test1 {
         String state = "Indiana";
         producktCategory.setPreparedFood();
         BigDecimal test = producktCategory.checkPreparedFood(state);
-        assertEquals(BigDecimal.valueOf(0.09),test);
+        assertEquals(BigDecimal.valueOf(9),test);
 
         System.out.print(state);
     }
@@ -48,7 +53,7 @@ public class Test1 {
         String state = "Illinois";
         producktCategory.setPresciptionDrugs();
         BigDecimal test = producktCategory.checkPresciptionDrugs(state);
-        assertEquals(BigDecimal.valueOf(0.01),test);
+        assertEquals(BigDecimal.valueOf(1),test);
 
         System.out.print(state);
     }
@@ -58,7 +63,7 @@ public class Test1 {
         String state = "Illinois";
         producktCategory.setNonPresciptionDrugs();
         BigDecimal test = producktCategory.checkNonPresciptionDrugs(state);
-        assertEquals(BigDecimal.valueOf(0.01),test);
+        assertEquals(BigDecimal.valueOf(1),test);
 
         System.out.print(state);
     }

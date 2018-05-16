@@ -15,15 +15,15 @@ class TaxCalculation {
         BigDecimal tax = states.statesList.get(stateName);
 
         if(producktCategory.checkGroceries(stateName) != null){
-            tax = tax.add(producktCategory.checkGroceries(stateName));
+            tax = producktCategory.checkGroceries(stateName);
             }else if (producktCategory.checkIntangibles(stateName) != null){
-                    tax = tax.add(producktCategory.checkIntangibles(stateName));
+                    tax = producktCategory.checkIntangibles(stateName);
                 }else if (producktCategory.checkNonPresciptionDrugs(stateName) !=null){
-                        tax = tax.add(producktCategory.checkNonPresciptionDrugs(stateName));
+                        tax = producktCategory.checkNonPresciptionDrugs(stateName);
                     }else if (producktCategory.checkPresciptionDrugs(stateName) != null){
-                            tax = tax.add(producktCategory.checkPresciptionDrugs(stateName));
-                    }else if (producktCategory.checkPreparedFood(stateName) != null){
-                                tax = tax.add(producktCategory.checkPreparedFood(stateName));
+                            tax = producktCategory.checkPresciptionDrugs(stateName);
+                        }else if (producktCategory.checkPreparedFood(stateName) != null){
+                                tax = producktCategory.checkPreparedFood(stateName);
         }
 
         tax = tax.divide(new BigDecimal(100),2,BigDecimal.ROUND_CEILING);
