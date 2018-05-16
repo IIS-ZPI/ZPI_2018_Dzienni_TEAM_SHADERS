@@ -7,11 +7,24 @@ class TaxCalculation {
 
     private BigDecimal baseCost = new BigDecimal(10);
     private BigDecimal generalCost = new BigDecimal(12.155);
+    private ProducktCategory producktCategory = new ProducktCategory();
     private States states = new States();
 
     BigDecimal marginCalculation(String stateName)
     {
         BigDecimal tax = states.statesList.get(stateName);
+
+        if(producktCategory.checkGroceries(stateName) != null){
+            tax = tax.add(producktCategory.checkGroceries(stateName));
+            }else if (producktCategory.checkIntangibles(stateName) != null){
+                    tax = tax.add(producktCategory.checkIntangibles(stateName));
+                }else if (producktCategory.checkNonPresciptionDrugs(stateName) !=null){
+                        tax = tax.add(producktCategory.checkNonPresciptionDrugs(stateName));
+                    }else if (producktCategory.checkPresciptionDrugs(stateName) != null){
+                            tax = tax.add(producktCategory.checkPresciptionDrugs(stateName));
+                    }else if (producktCategory.checkPreparedFood(stateName) != null){
+                                tax = tax.add(producktCategory.checkPreparedFood(stateName));
+        }
 
         tax = tax.divide(new BigDecimal(100),2,BigDecimal.ROUND_CEILING);
         System.out.println(tax);
