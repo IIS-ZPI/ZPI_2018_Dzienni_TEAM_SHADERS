@@ -1,28 +1,35 @@
 language: android
 env:
-  - TEST_SUITE=units
+- TEST_SUITE=units
 android:
   components:
-    - tools
-    - platform-tools
-    - build-tools-28-rc1
-    - android-27
-    - add-on
-    - extra
+  - tools
+  - platform-tools
+  - build-tools-28-rc1
+  - android-27
+  - add-on
+  - extra
 licenses:
-    - 'android-sdk-license-.+'
+- android-sdk-license-.+
 jdk:
-    - oraclejdk8
+- oraclejdk8
 script:
-    - ./gradlew clean build -xlint -xlint
+- "./gradlew clean build -xlint -xlint"
 before_cache:
-    - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
   directories:
-    - $HOME/.m2
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+  - "$HOME/.m2"
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
 before_install:
-      - chmod +x ./gradlew
-      - yes | sdkmanager "platforms;android-27"
-      - yes | sdkmanager "build-tools;28.0.0-rc1"
+- chmod +x ./gradlew
+- yes | sdkmanager "platforms;android-27"
+- yes | sdkmanager "build-tools;28.0.0-rc1"
+deploy:
+  provider: releases
+  api_key:
+    secure: iXISqAQ+UE/6Q3ZCAaoHko8hWtHN5nTa1h2QJZNZhV7fFdk7m56xP3XHl7G9y3UBRDoIpJTMKXU36n1Oz97BDBRuBMe5BzgVcSuUmu1prASlW9qWsCJPV/o/BOoWT5q8lsby+rIe4HTri+Nl7LwjwMpw0Hu3LQCteg/1kCpwBBo6+Yu3DMCIw9Jr/ZnSQe56ix+v8fZFvVrDDHghwcUZ+uXq5gaIWCpJtbpJZPtzO+hXXi+BUKWMVIu3YL3vLFuZ8DznvgoZdmbc5nvaIOyOshTYBGSaduag7+ohJl9bnwfRkxBN8W+85ar3u4DANSh+mkY31L3LzFCzhItYd6wzj2sVE6o4Vgsod/AJDPCIcgYFmVw1Sbxvhh+nFaeNjX9MPKTsjEPAsofgVCE/D3TsG8FnVOf+4YsEMrkJ7z2BR0bzK6qxZsfqU1QMJd5GYg66R8wyxjT1vuNbZTMCY2w6Ls8hBpnRGL3Ka1vZHtisrylQDlPa6BSgLl8L3OWlp9bMo4wPKv5G5kFnaZdWVZH46ILbzRYqatnyFcVJlLLjplFzmOi8ngFXuScLL+l8m6OnQ1E669ILxWRRGfc05jFHuk2XWeZzdkEJdmJx6v7r5TMm3dVBj0ZFiTcHbcp8qsD8U5KOFiSF5lsydLNKUZwXU3SWRf1LFKZwnRU6niqdiqw=
+  file: app/release/app-release.apk
+  on:
+    repo: IIS-ZPI/ZPI_2018_Dzienni_TEAM_SHADERS
