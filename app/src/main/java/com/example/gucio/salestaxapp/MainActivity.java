@@ -10,6 +10,10 @@ import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,7 +27,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     Spinner expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
-    States states;
+    TaxCalculation taxCalculation = new TaxCalculation();
+     private States states = new States();
 
     private void setupApp()
     {
@@ -38,15 +43,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
         // Spinner element
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        taxValue = (TextView) findViewById(R.id.TaxValue);
 
-        // Spinner click listener
+                // Spinner click listener
         spinner.setOnItemSelectedListener(this);
         states = new States();
 
 
         // Spinner Drop down elements
 
-        List<String> listOfStates = states.getStatesList();
+        List<String> listOfStates = new ArrayList<String>(states.statesList.keySet());
 
 
         // Creating adapter for spinner
@@ -66,6 +72,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         // Showing selected spinner item
         Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
+        taxValue.setText(taxCalculation.marginCalculation(item).toString());
+
     }
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
@@ -81,9 +89,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         // Adding child data
 
-       List<String> listOfStates = states.getStatesList();
 
-        listDataChild.put(listDataHeader.get(0), listOfStates); // Header, Child data
+
+       // listDataChild.put(listDataHeader.get(0), listOfStates); // Header, Child data
 
     }
 }
