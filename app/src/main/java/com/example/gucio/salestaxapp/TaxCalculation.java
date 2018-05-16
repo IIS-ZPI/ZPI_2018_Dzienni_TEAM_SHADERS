@@ -10,7 +10,7 @@ class TaxCalculation {
     private ProducktCategory producktCategory = new ProducktCategory();
     private States states = new States();
 
-    BigDecimal marginCalculation(String stateName)
+    public BigDecimal marginCalculation(String stateName)
     {
         BigDecimal tax = states.statesList.get(stateName);
 
