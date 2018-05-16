@@ -75,35 +75,35 @@ public class ProducktCategory {
     public BigDecimal checkGroceries (String state)
     {
         if(groceries.containsKey(state)){
-            return groceries.get(state);
+            return groceries.get(state).stripTrailingZeros();
         }else return null;
     }
 
     public BigDecimal checkPreparedFood (String state)
     {
         if(preparedFood.containsKey(state)){
-            return preparedFood.get(state);
+            return preparedFood.get(state).stripTrailingZeros();
         }else return null;
     }
 
     public BigDecimal checkPresciptionDrugs (String state)
     {
         if(presciptionDrugs.containsKey(state)){
-            return presciptionDrugs.get(state);
+            return presciptionDrugs.get(state).stripTrailingZeros();
         }else return null;
     }
 
     public BigDecimal checkNonPresciptionDrugs (String state)
     {
         if(nonPresciptionDrugs.containsKey(state)){
-            return nonPresciptionDrugs.get(state);
+            return nonPresciptionDrugs.get(state).stripTrailingZeros();
         }else return null;
     }
 
     public BigDecimal checkIntangibles (String state)
     {
         if(intangibles.containsKey(state)){
-            return intangibles.get(state);
+            return intangibles.get(state).stripTrailingZeros();
         }else return null;
     }
 
