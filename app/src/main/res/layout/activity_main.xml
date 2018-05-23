@@ -20,10 +20,22 @@
             android:layout_width="match_parent"
             android:layout_height="75dp" />
 
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="75dp" />
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="60dp">
 
+            <EditText
+                android:id="@+id/ProductCategory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/ProductTax" />
         </TableRow>
 
         <TableRow

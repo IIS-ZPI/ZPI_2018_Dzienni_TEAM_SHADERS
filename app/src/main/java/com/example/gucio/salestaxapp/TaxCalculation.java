@@ -12,6 +12,9 @@ class TaxCalculation {
 
     public BigDecimal marginCalculation(String stateName)
     {
+        baseCost = new BigDecimal(10);
+        generalCost = new BigDecimal(12.485);
+
         BigDecimal tax = states.statesList.get(stateName);
 
         if(producktCategory.checkGroceries(stateName) != null){
@@ -27,9 +30,9 @@ class TaxCalculation {
         }
 
         tax = tax.divide(new BigDecimal(100),2,BigDecimal.ROUND_CEILING);
-        System.out.println(tax);
+        //System.out.println(tax);
         baseCost = baseCost.add(baseCost.multiply(tax));
-        System.out.println(baseCost);
+        //System.out.println(baseCost);
         BigDecimal profitMargin = generalCost.subtract(baseCost);
         profitMargin = profitMargin.divide(new BigDecimal(1),4,BigDecimal.ROUND_CEILING);
 
