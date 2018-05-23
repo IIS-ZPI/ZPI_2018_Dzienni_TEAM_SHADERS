@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        Key {
+            keyAlias 'key0'
+            keyPassword '123456'
+            storeFile file('C:/Users/Student/Desktop/New/ZPI_2018_Dzienni_TEAM_SHADERS/key.jks')
+            storePassword '123456'
+        }
+    }
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.gucio.salestaxapp"
@@ -14,6 +22,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.Key
         }
     }
     buildToolsVersion '27.0.3'
