@@ -27,7 +27,7 @@ public class Test1 {
         System.out.println("Indiana Test");
         BigDecimal testIndiana = taxCalculation.marginCalculation("Indiana");
         System.out.println("Zarobek: "+testIndiana);
-        assertEquals(BigDecimal.valueOf(1.357), testIndiana);
+        assertEquals(BigDecimal.valueOf(1.585), testIndiana);
     }
     @Test
     public void checkTestGroceries() {
