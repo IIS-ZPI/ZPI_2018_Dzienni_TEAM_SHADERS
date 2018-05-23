@@ -11,12 +11,21 @@ import java.util.HashMap;
 public class ProducktCategory {
 
     private States states;
-    private HashMap<String, BigDecimal> groceries = new HashMap<>();
-    private HashMap<String, BigDecimal> preparedFood =new HashMap<>();
-    private HashMap<String, BigDecimal> presciptionDrugs =new HashMap<>();
-    private HashMap<String, BigDecimal> nonPresciptionDrugs=new HashMap<>();
-    private HashMap<String, BigDecimal> clothing = new HashMap<>();
-    private HashMap<String, BigDecimal> intangibles = new HashMap<>();
+     HashMap<String, BigDecimal> groceries = new HashMap<>();
+     HashMap<String, BigDecimal> preparedFood =new HashMap<>();
+     HashMap<String, BigDecimal> presciptionDrugs =new HashMap<>();
+     HashMap<String, BigDecimal> nonPresciptionDrugs=new HashMap<>();
+     HashMap<String, BigDecimal> clothing = new HashMap<>();
+     HashMap<String, BigDecimal> intangibles = new HashMap<>();
+
+     public ProducktCategory() {
+         setGroceries();
+         setPreparedFood();
+         setClothing();
+         setNonPresciptionDrugs();
+         setPresciptionDrugs();
+         setIntangibles();
+     }
 
     public void setGroceries()
     {

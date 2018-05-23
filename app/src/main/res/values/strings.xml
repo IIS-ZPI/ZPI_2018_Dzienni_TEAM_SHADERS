@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SalesTaxapp</string>
     <string name="taxvalue">TaxValue</string>
+    <string name="ProductTax">ProductTax</string>
 </resources>
