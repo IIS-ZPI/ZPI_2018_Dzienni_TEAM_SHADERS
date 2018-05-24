@@ -5,7 +5,7 @@ android {
         Key {
             keyAlias 'key0'
             keyPassword '123456'
-            storeFile file('C:/Users/Student/Desktop/New/ZPI_2018_Dzienni_TEAM_SHADERS/key.jks')
+            storeFile file('key.jks')
             storePassword '123456'
         }
     }
