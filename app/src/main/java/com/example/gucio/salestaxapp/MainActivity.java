@@ -1,4 +1,5 @@
 package com.example.gucio.salestaxapp;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,23 +21,23 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    private TextView taxValue,productCategory;
+    private TextView taxValue, productCategory;
     private ExpandableListView state;
     private EditText income;
     SpinnerAdapter spinnerAdapter;
     Spinner expListView;
-    String choosenState = "North Carolina";
+    String choosenState;
+    String category = "";
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
     TaxCalculation taxCalculation = new TaxCalculation();
-     private States states = new States();
+    private States states = new States();
     ProducktCategory productCat = new ProducktCategory();
 
-    private void setupApp()
-    {
+    private void setupApp() {
         taxValue = findViewById(R.id.TaxValue);
-       // state = findViewById(R.id.State);
-       // income = findViewById(R.id.TaxValue);
+        // state = findViewById(R.id.State);
+        // income = findViewById(R.id.TaxValue);
     }
 
     @Override
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         taxValue = (TextView) findViewById(R.id.TaxValue);
         productCategory = (TextView) findViewById(R.id.ProductCategory);
 
-                // Spinner click listener
+        // Spinner click listener
         spinner.setOnItemSelectedListener(this);
         spiner2.setOnItemSelectedListener(this);
 
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
         spiner2.setAdapter(dataAdapter2);
-        }
+    }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -87,50 +88,88 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         String item = parent.getItemAtPosition(position).toString();
 
         Spinner spinner = (Spinner) parent;
-        if(spinner.getId() == R.id.spinner)
-        {
+        if (spinner.getId() == R.id.spinner) {
             choosenState = item;
             // Showing selected spinner item
+
             Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
-            taxValue.setText(taxCalculation.marginCalculation(item).toString());
+
+            switch (category) {
+                case "Groceries":
+                    if (productCat.checkGroceries(choosenState) != null) {
+                        productCategory.setText(productCat.groceries.get(choosenState).toString());
+                    } else {
+                        productCategory.setText("Not avaliabe");
+                    }
+                    break;
+                case "PreparedFood":
+                    if (productCat.checkPreparedFood(choosenState) != null) {
+                        productCategory.setText(productCat.preparedFood.get(choosenState).toString());
+                    } else {
+                        productCategory.setText("Not avaliabe");
+                    }
+                    break;
+                case "Presception Drugs":
+                    if (productCat.checkPresciptionDrugs(choosenState) != null) {
+                        productCategory.setText(productCat.presciptionDrugs.get(choosenState).toString());
+                    } else {
+                        productCategory.setText("Not avaliabe");
+                    }
+                    break;
+                case "NonPresception Drugs":
+                    if (productCat.checkNonPresciptionDrugs(choosenState) != null) {
+                        productCategory.setText(productCat.nonPresciptionDrugs.get(choosenState).toString());
+                    } else {
+                        productCategory.setText("Not avaliabe");
+                    }
+                    break;
+            }
+
 
         }
-        if(spinner.getId() == R.id.spinner2)
-        {
-            System.out.println(productCat.checkGroceries(choosenState));
-            if(productCat.checkGroceries(choosenState) != null){
-                productCategory.setText(productCat.groceries.get(choosenState).toString());
-            }else if (productCat.checkIntangibles(choosenState) != null){
-                productCategory.setText(productCat.intangibles.get(choosenState).toString());
-            }else if (productCat.checkNonPresciptionDrugs(choosenState) !=null){
-                productCategory.setText(productCat.nonPresciptionDrugs.get(choosenState).toString());
-            }else if (productCat.checkPresciptionDrugs(choosenState) != null){
-                productCategory.setText(productCat.presciptionDrugs.get(choosenState).toString());
-            }else if (productCat.checkPreparedFood(choosenState) != null){
-                productCategory.setText(productCat.preparedFood.get(choosenState).toString());
+        if (spinner.getId() == R.id.spinner2) {
+
+            switch (item) {
+                case "Groceries":
+                    if (productCat.checkGroceries(choosenState) != null) {
+                        productCategory.setText(productCat.groceries.get(choosenState).toString());
+                    } else {
+                        productCategory.setText("Not avaliabe");
+                    }
+                    break;
+                case "PreparedFood":
+                    if (productCat.checkPreparedFood(choosenState) != null) {
+                        productCategory.setText(productCat.preparedFood.get(choosenState).toString());
+                    } else {
+                        productCategory.setText("Not avaliabe");
+                    }
+                    break;
+                case "Presception Drugs":
+                    if (productCat.checkPresciptionDrugs(choosenState) != null) {
+                        productCategory.setText(productCat.presciptionDrugs.get(choosenState).toString());
+                    } else {
+                        productCategory.setText("Not avaliabe");
+                    }
+                    break;
+                case "NonPresception Drugs":
+                    if (productCat.checkNonPresciptionDrugs(choosenState) != null) {
+                        productCategory.setText(productCat.nonPresciptionDrugs.get(choosenState).toString());
+                    } else {
+                        productCategory.setText("Not avaliabe");
+                    }
+                    break;
             }
+
+            category = item;
         }
-        
-        
+
+
+        taxValue.setText(taxCalculation.marginCalculation(choosenState, category).toString());
 
     }
+
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
     }
 
-    private void prepareListData()
-    {
-        listDataHeader = new ArrayList<String>();
-        listDataChild = new HashMap<String, List<String>>();
-
-        // Adding child data
-        listDataHeader.add("States");
-
-        // Adding child data
-
-
-
-       // listDataChild.put(listDataHeader.get(0), listOfStates); // Header, Child data
-
-    }
 }

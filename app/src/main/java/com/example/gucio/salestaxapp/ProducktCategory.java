@@ -21,7 +21,6 @@ public class ProducktCategory {
      public ProducktCategory() {
          setGroceries();
          setPreparedFood();
-         setClothing();
          setNonPresciptionDrugs();
          setPresciptionDrugs();
          setIntangibles();
@@ -71,10 +70,6 @@ public class ProducktCategory {
         nonPresciptionDrugs.put("Illinois",new BigDecimal(1).setScale(2,RoundingMode.HALF_EVEN));
     }
 
-    public void setClothing()
-    {
-
-    }
 
     public void setIntangibles()
     {

@@ -29,26 +29,25 @@
             android:layout_width="match_parent"
             android:layout_height="60dp">
 
-            <EditText
+            <TextView
                 android:id="@+id/ProductCategory"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/ProductTax" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ProductTax"
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="60dp">
 
-            <EditText
+            <TextView
                 android:id="@+id/TaxValue"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/taxvalue" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/taxvalue"
+                android:textSize="24sp" />
+
         </TableRow>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
