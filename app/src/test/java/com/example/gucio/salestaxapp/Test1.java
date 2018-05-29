@@ -16,18 +16,18 @@ public class Test1 {
 
     TaxCalculation taxCalculation = new TaxCalculation();
     ProducktCategory producktCategory = new ProducktCategory();
-    Scanner scanner = new Scanner(System.in);
-    private States states = new States();
+
 
     @Test
     public void correctTaxCalculation() {
-        BigDecimal test = taxCalculation.marginCalculation("Alabama");
-        assertEquals(BigDecimal.valueOf(2.085), test);
-
+        BigDecimal test = taxCalculation.marginCalculation("Tennessee","Groceries");
+        System.out.println("Tenesee Test");
+        assertEquals(BigDecimal.valueOf(1.985), test);
+        System.out.println("Wynik pozytywny, ZarobeK: " + test);
         System.out.println("Indiana Test");
-        BigDecimal testIndiana = taxCalculation.marginCalculation("Indiana");
-        System.out.println("Zarobek: "+testIndiana);
+        BigDecimal testIndiana = taxCalculation.marginCalculation("Indiana","PreparedFood");
         assertEquals(BigDecimal.valueOf(1.585), testIndiana);
+        System.out.println("Test pozytywny, Zarobek: "+testIndiana);
     }
     @Test
     public void checkTestGroceries() {
