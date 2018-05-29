@@ -45,6 +45,7 @@ public class States {
         statesList.put("Maine",new BigDecimal(5.5));
         statesList.put("Nebraska",new BigDecimal(5.5));
         statesList.put("New Hampshire",new BigDecimal(0));
+        statesList.put("Hawai",new BigDecimal(3.7));
 
     }
 }
